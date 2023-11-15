@@ -1,18 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from './menu/menu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatMenuModule } from '@angular/material/menu';
+import { FooterComponent } from './footer/footer.component';
+import { MatIconModule } from '@angular/material/icon';
+import { UnloggedHeaderComponent } from './unlogged-header/unlogged-header.component';
 import { MatButtonModule } from '@angular/material/button';
+import { LoggedHeaderComponent } from './logged-header/logged-header.component';
+import { InitialSectionComponent } from './initial-section/initial-section.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
+
 
 @NgModule({
-  imports: [
-    BrowserAnimationsModule,
-    CommonModule,
-    MatButtonModule,
-    MatMenuModule,
+  declarations: [
+    FooterComponent,
+    UnloggedHeaderComponent,
+    LoggedHeaderComponent,
+    InitialSectionComponent,
+    ThankYouComponent,
   ],
-  declarations: [MenuComponent],
-  exports: [MenuComponent],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatButtonModule,
+  ],
+  exports: [
+    FooterComponent,
+    UnloggedHeaderComponent,
+    LoggedHeaderComponent,
+    InitialSectionComponent,
+    ThankYouComponent
+  ]
 })
-export class LayoutModule {}
+export class LayoutModule { }
